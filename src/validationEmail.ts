@@ -9,7 +9,12 @@ export function validateEmail(email: string) : boolean{
 
     // Séparer local (ce qu'il y a avant le @) et domaine (ce qu'il y a après)
     const parts = email.split("@");
-    const domaine = parts[parts.length -1];
+
+    const domaine = parts[1];
+    const local = parts[0]
+
+    // Vérifie qu'il y a quelque chose avant et apres le @
+    if (local.length == 0 || domaine.length == 0) return false;
 
     // Doit contenir au moins 1 point dans le domaine (et pas en dernier charactère)
     if (!domaine.includes(".") || domaine.endsWith(".")) return false;

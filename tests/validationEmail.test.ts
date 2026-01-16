@@ -53,4 +53,28 @@ describe("validateEmail", () => {
             expect(result).toBe(false);
         });
     });
+
+    describe("Il doit avoir du texte avant et après le @", () => {
+        it("devrait rejeter un email qui ne contient rien avant le @", () => {
+            //Arrange
+            const email = "@gmail.com"
+            
+            //Act
+            const result = validateEmail(email);
+
+            //Assert
+            expect(result).toBe(false);
+        });
+
+        it("devrait rejeter un email qui ne contient rien avant le @", () => {
+            //Arrange
+            const email = "test123@"
+            
+            //Act
+            const result = validateEmail(email);
+
+            //Assert
+            expect(result).toBe(false);
+        });
+    });
 })
