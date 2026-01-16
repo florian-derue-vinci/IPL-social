@@ -1,3 +1,5 @@
+// Validation d'Email | Examen DevOps 2026 - Version 1.0
+
 /*
     Valide un email selon certains critères
     email : string | l'email a valider
