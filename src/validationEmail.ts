@@ -13,5 +13,8 @@ export function validateEmail(email: string) : boolean{
 
     // Doit contenir au moins 1 point dans le domaine (et pas en dernier charactère)
     if (!domaine.includes(".") || domaine.endsWith(".")) return false;
+
+    // Ne peut pas contenir d'espace
+    if (email.includes(" ")) return false;
     return true;
 }
