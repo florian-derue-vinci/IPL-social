@@ -1,0 +1,26 @@
+{
+  "name": "ipl-social",
+  "version": "1.0.0",
+  "description": "Validation d'email fait en TDD pour l'examen DevOps 2026",
+  "main": "src/validationEmail.ts",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/florian-derue-vinci/IPL-social.git"
+  },
+  "keywords": [],
+  "author": "Derue Florian",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/florian-derue-vinci/IPL-social/issues"
+  },
+  "homepage": "https://github.com/florian-derue-vinci/IPL-social#readme",
+  "devDependencies": {
+    "jest": "^30.2.0"
+  }
+}
