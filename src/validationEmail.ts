@@ -10,6 +10,9 @@ export function validateEmail(email: string) : boolean{
     // Séparer local (ce qu'il y a avant le @) et domaine (ce qu'il y a après)
     const parts = email.split("@");
 
+    // Amélioration : vérifie qu'il n'y a qu'un seul @ dans l'email (pour éviter les problemes avec split)
+    if (parts.length !== 2) return false;
+
     const domaine = parts[1];
     const local = parts[0]
 

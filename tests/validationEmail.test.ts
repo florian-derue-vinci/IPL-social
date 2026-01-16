@@ -13,6 +13,18 @@ describe("validateEmail", () => {
             //Assert
             expect(result).toBe(false);
         });
+        
+        // Bonus ajouté : max 1 @ dans l'email
+        it("devrait rejeter un email qui contient plusieurs @", () => {
+            //Arrange
+            const email = "test@email.123@"
+            
+            //Act
+            const result = validateEmail(email);
+
+            //Assert
+            expect(result).toBe(false);
+        });
 
     });
 
